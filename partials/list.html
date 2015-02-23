@@ -1,0 +1,16 @@
+<section class="artistpage">
+    <div class="search">
+        <h1>Artists Directory</h1>
+        <label>search: </label>
+        <input ng-model="query" placeholder="Search for artists" autofocus>
+    </div>
+    <ul>
+        <li ng-repeat="item in artists | filter: query">
+            <img ng-src="img/{{ item.shortname }}.jpg" alt="Photo of {{ item.name }}">
+            <div>
+                <h2>{{ item.name }}</h2>
+                <h3>{{ item.reknown }}</h3>
+            </div>
+        </li>
+    </ul>
+</section>
